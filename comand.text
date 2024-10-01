@@ -1,0 +1,6 @@
+kubectl apply -f .\sample-pod.yml 
+kubectl get all = docker ps -all
+kubectl get pods = docker ps
+kubectl logs mypod 
+kubectl delete all --all ลบทุกอย่าง
+kubectl delete deployments client-deployment    ลบdeployment ทั้งหมดของ client-deployment

@@ -4,3 +4,13 @@ kubectl get pods = docker ps
 kubectl logs mypod 
 kubectl delete all --all ลบทุกอย่าง
 kubectl delete deployments client-deployment    ลบdeployment ทั้งหมดของ client-deployment
+
+เปิด jemeter 
+เปิด cmd
+cd Desktop
+C:\Users\USER\Desktop>cd apache-jmeter-5.6.3
+C:\Users\USER\Desktop\apache-jmeter-5.6.3>cd bin
+C:\Users\USER\Desktop\apache-jmeter-5.6.3\bin>jmeter.bat
+
+http://localhost:30002/api/health
+http://localhost:30002/api/todo

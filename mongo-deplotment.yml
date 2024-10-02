@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mongo-deployment
+spec:
+  replicas: 1 #จำนวน pod ที่ต้องการให้ run
+  selector:
+    matchLabels:
+      app: mongo
+  template:
+    metadata: 
+      name: mongo-pods
+      labels:  
+        app: mongo
+    spec:
+      containers:
+      - name: mongo
+        image: mongo
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: mongo-service
+spec:
+  type: ClusterIP # ไม่สามารถเข้าจากภายนอกได้
+  selector:
+    app: mongo
+  ports:
+    - port: 27017  # Default porrt mongo
+      targetPort: 27017
+      
